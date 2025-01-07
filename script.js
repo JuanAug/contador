@@ -1,4 +1,4 @@
-const dataInicio = new Date(2024, 11, 15); // Data de início do relacionamento
+const dataInicio = new Date(2024, 10, 15); // Data de início do relacionamento
 
 function calcularTempoJuntos() {
     const hoje = new Date();
@@ -38,12 +38,6 @@ function calcularTempoJuntos() {
         segundos += 60;
         minutos--;
     }
-
-    // Corrigir o cálculo de dias totais (diferença em milissegundos)
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); // Diferença em dias
-
-    // Exibir a quantidade de dias
-    document.getElementById("contador").textContent = diffDays;
 
     // Exibir o formato de anos, meses, dias, horas, minutos e segundos
     document.getElementById("tempo-juntos").textContent = `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
