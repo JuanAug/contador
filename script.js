@@ -39,8 +39,16 @@ function calcularTempoJuntos() {
         minutos--;
     }
 
+    // Ajustar a exibição dos anos, meses, dias, horas, minutos e segundos no singular/plural
+    const anosTexto = anos === 1 ? 'ano' : 'anos';
+    const mesesTexto = meses === 1 ? 'mês' : 'meses';
+    const diasTexto = dias === 1 ? 'dia' : 'dias';
+    const horasTexto = horas === 1 ? 'hora' : 'horas';
+    const minutosTexto = minutos === 1 ? 'minuto' : 'minutos';
+    const segundosTexto = segundos === 1 ? 'segundo' : 'segundos';
+
     // Exibir o formato de anos, meses, dias, horas, minutos e segundos
-    document.getElementById("tempo-juntos").textContent = `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    document.getElementById("tempo-juntos").textContent = `${anos} ${anosTexto}, ${meses} ${mesesTexto}, ${dias} ${diasTexto}, ${horas} ${horasTexto}, ${minutos} ${minutosTexto} e ${segundos} ${segundosTexto}`;
 }
 
 // Calcular assim que a página for carregada e depois atualizar a cada 1 segundo
